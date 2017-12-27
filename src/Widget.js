@@ -108,7 +108,7 @@ handleChange=(event)=>{
   {
     const style={
       backgroundColor:"black",
-      height:"1000px",
+      height:"3000px",
       border:"10px solid",
       color:"white"
     }

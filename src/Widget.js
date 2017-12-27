@@ -15,7 +15,7 @@ export default class Widget extends Component
     value:""
    };
   list = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
-  
+
   baseUrl ="https://wind-bow.gomix.me/twitch-api/streams/"
   lastUrl="?callback=?";
 
@@ -29,22 +29,22 @@ export default class Widget extends Component
       let onlineAr =ref.state.online;
       let allAr = ref.state.all;
       let offlineAr = ref.state.offline;
-     
-     
+
+
       if (d.stream === null) {
         offlineAr.push({ name: li, data: d,status:"offline" });
         allAr.push({ name: li, data: d,status:"offline" });
         ref.setState({ all: allAr, present: allAr,offline:offlineAr });
       }
       else {
-        
+
 
         onlineAr.push({ name: li, data: d,status:"online" });
         allAr.push({ name: li, data: d, status: "online" });
         ref.setState({ all: allAr, present: allAr,online:onlineAr });
 
       }
-      //console.log(ref.state.all); 
+      //console.log(ref.state.all);
 
       /*
       let allAr=ref.state.all;
@@ -52,12 +52,12 @@ export default class Widget extends Component
       console.log(allAr); */
       //ref.setState({all:allAr});
       //console.log(ref.state.all);
-    
+
     });
     });
-    
+
   }
-  
+
 
 
 
@@ -77,7 +77,7 @@ export default class Widget extends Component
     this.handleSubmit();
     //const { all } = this.state;
     //this.setState({ present: all });
-    
+
 
   }
 
@@ -87,7 +87,7 @@ export default class Widget extends Component
     console.log(d);
     //data=d;
   })
-   console.log(data); 
+   console.log(data);
 
   }*/
 
@@ -102,8 +102,8 @@ handleChange=(event)=>{
   //console.log(result);
   //this.setState({present:result});
   //console.log(event.target.value);
-} 
-  
+}
+
   render()
   {
     const style={
@@ -115,7 +115,7 @@ handleChange=(event)=>{
     return(
       <div style={style} align="center">
 
-        <div className="col-sm-offset-1" style={{marginTop:"10px"}}>
+        <div className="col-sm-offset-1 col-sm-offset-4" style={{marginTop:"10px"}}>
           <div className="row">
           <div className="col-sm-offset-4 col-sm-4">
           <input className="form-control" type="text" onChange={this.handleChange}  />
